@@ -1,5 +1,5 @@
 ##  HvA ASV :: Assignment 4
-This is an introductory exercise about unitary tests.
+This is an introductory example about UI tests.
 
 Credits: https://learn.techbeacon.com/units/how-set-continuous-testing-framework-using-selenium-maven-jenkins
 
