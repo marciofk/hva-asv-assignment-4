@@ -22,7 +22,7 @@ public class TestSelenium {
 
         // Start a new Chrome browser instance and maximize the browser window
         ChromeDriver driver = new ChromeDriver();
-        driver.manage().window().maximize();
+        //driver.manage().window().maximize();
 
         // Navigate to the Amazon.com home page
         driver.get("https://www.amazon.com/");
