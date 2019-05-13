@@ -27,6 +27,8 @@ public class TestSelenium {
         // Navigate to the Amazon.com home page
         driver.get("https://www.amazon.com/");
 
+        
+
         // Type "Software testing" in the search window
         driver.findElement(By.id("twotabsearchtextbox")).sendKeys("Software Testing");
 
@@ -39,8 +41,10 @@ public class TestSelenium {
         // Copy the file to the target folder
         FileUtils.copyFile(scrFile, new File("target/screenshot.png"));
 
+        driver.manage().timeouts().implicitlyWait(10, java.util.concurrent.TimeUnit.SECONDS);
+
         // Select the first item in the list of search results
-        driver.findElement(By.xpath("(//div[@id='resultsCol']//a[contains(@class,'access-detail-page')])[1]")).click();
+        driver.findElement(By.partialLinkText("A Friendly Introduction to Software Testing")).click();
 
         // Check that the page title contains the term "Software Testing"
         Assert.assertTrue(driver.getTitle().contains("Software Testing"));
